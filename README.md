@@ -15,7 +15,10 @@ This example consists of:
 > ⚠️ This project relies on [yarn](https://yarnpkg.com/) for start and build scripts. You may need to make changes to scripts/lerna.json to get it working with npm client.
 
 - `git clone git@github.com:filoxo/single-spa-example-rxjs-shared-state.git`
-- run `yarn bootstrap`
+- `cd single-spa-example-rxjs-shared-state`
+- Ensure you have Yarn installed. If not, you can install it using npm:`npm install -g yarn`
+- Install the dependencies:`yarn install`
+- If you have issues while running yarn build run `rimraf node_modules .cache dist && yarn cache clean && npx nx reset`
 
 ### Running locally
 
