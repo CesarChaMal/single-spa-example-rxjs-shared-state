@@ -2,9 +2,12 @@
   "name": "single-spa-example-rxjs-shared-state",
   "version": "1.0.0",
   "description": "single-spa example that shows how to use a utility module to share some application state across other microfrontends",
-  "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "start": "lerna run start --stream",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],  "scripts": {
+    "bootstrap": "yarn install",
+    "start": "cross-env isLocal=true lerna run start --stream",
     "prebuild": "rimraf deploy && mkdirp deploy deploy/auth deploy/home deploy/login deploy/navbar",
     "build": "lerna run build",
     "postbuild": "cp packages/root-config/dist/* deploy && cp packages/auth/dist/* deploy/auth && cp packages/home/dist/* deploy/home && cp packages/login/dist/* deploy/login && cp packages/navbar/dist/* deploy/navbar",
