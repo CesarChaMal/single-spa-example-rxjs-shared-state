@@ -29,7 +29,20 @@ export default function Root(props) {
   };
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
+      <div style={{
+        position: "absolute",
+        top: "5px",
+        left: "10px",
+        fontSize: "0.75rem",
+        opacity: 0.7,
+        background: "rgba(0, 0, 0, 0.1)",
+        padding: "2px 6px",
+        borderRadius: "3px",
+        zIndex: 10
+      }}>
+        Login • React
+      </div>
       <form name="login" className="login-form" onSubmit={onSubmit}>
         <label htmlFor="username">Username</label>
         <input id="username" type="text" required />

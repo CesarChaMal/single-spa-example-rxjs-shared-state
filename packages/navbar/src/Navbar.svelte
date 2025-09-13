@@ -25,6 +25,7 @@
 </script>
 
 <nav>
+  <div class="microfrontend-label">Navbar • Svelte</div>
   <Router>
     {#if $auth.sessionToken}
       <span>Welcome!</span>
@@ -55,5 +56,16 @@
   nav .action:hover,
   nav .action:focus {
     background: rgba(0, 0, 0, 0.3);
+  }
+
+  .microfrontend-label {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 0.75rem;
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2px 6px;
+    border-radius: 3px;
   }
 </style>

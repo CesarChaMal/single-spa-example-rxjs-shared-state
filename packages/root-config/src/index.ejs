@@ -67,7 +67,8 @@
 
   <template id="single-spa-layout">
     <single-spa-router>
-      <div>
+      <div style="position: relative;">
+        <div style="position: absolute; top: 5px; right: 10px; font-size: 0.75rem; opacity: 0.7; background: rgba(0, 0, 0, 0.1); padding: 2px 6px; border-radius: 3px; z-index: 1000;">Root Config • single-spa</div>
         <application name="@example/navbar"></application>
       </div>
       <main>
